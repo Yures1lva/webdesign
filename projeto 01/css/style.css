@@ -1,0 +1,120 @@
+body {
+  background: #d7dad9;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.hero {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../images/bg.jpg");
+  height: 500px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 1px;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  margin-top: 250px;
+}
+
+.hero-content h1 {
+  text-transform: uppercase;
+  font-size: 36px;
+  color: white;
+  text-shadow: 2px 2px 2px #333;
+  justify-content: center;
+}
+
+.hero-content p {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  padding: 10px;
+  border-bottom: 2px solid white;
+  border-radius: 3px;
+}
+
+.hero nav li {
+  display: inline-block;
+  list-style: none;
+  padding: 15px;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.5);
+
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.hero a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+}
+
+.hero nav ul {
+  text-align: right;
+  margin: 5px 45px;
+}
+
+.hero nav li:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+.content-section {
+  background-color: white;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 3px;
+  overflow: auto;
+}
+
+.content-section h2 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.content-section p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+main div img {
+  width: 100%;
+}
+
+.card {
+  float: left;
+  margin: auto;
+  width: 32%;
+  box-sizing: border-box;
+  margin-left: 1%;
+  border-radius: 3px;
+  background-color: #082338;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.card p {
+  padding-left: 8px;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
+  background-color: white;
+  height: 50px;
+  line-height: 50px;
+}
