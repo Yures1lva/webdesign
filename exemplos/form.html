@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="nome que aparece nas pesquisas do google">
+  <meta name="keywords" content="html5, moda">
+  <title>Document</title>
+
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .formLogin {
+      width: 250px;
+      margin: 50px auto 0;
+    }
+
+    fieldset {
+      border-radius: 5px;
+    }
+
+    #user,
+    #pass,
+    .btn {
+      display: block;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    .lab {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 15px;
+    }
+
+    #user:focus,
+    #pass:focus {
+      background: #ddd;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Exemplo de form</h1>
+
+  <form action="#" method="POST" class="formLogin">
+    <fieldset>
+      <legend>login</legend>
+      <label class="lab" for="user">Digite o nome de usuário</label>
+      <input type="text" id="user" name="user" autofocus>
+
+      <label class="lab" for="user">Digite a senha</label>
+      <input type="password" id="pass" name="pass">
+
+      <input type="submit" value="logar" class="btn">
+    </fieldset>
+  </form>
+
+
+</body>
+
+</html>
