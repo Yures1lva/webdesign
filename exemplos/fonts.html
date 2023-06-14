@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="nome que aparece nas pesquisas do google">
+  <meta name="keywords" content="exemplo fonts">
+  <title>Fonts</title>
+  <style>
+    /* font-face serve para declarar fonts locais (cuidado com os direitos)
+    sempre bom separar por formatos para maior suporte a browsers
+    */
+
+    @font-face {
+      font-family: big_noodle_titling;
+      src: url(fonts/big_noodle_titling.eot);
+      src: url(fonts/big_noodle_titling.woff) format('woff'),
+        url(fonts/big_noodle_titling.ttf) format('truetype'),
+        url(fonts/big_noodle_titling.svg) format(svg);
+    }
+
+
+
+    h1 {
+      font-family: big_noodle_titling;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>
+    arooz texto texto
+  </h1>
+</body>
+
+</html>
