@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="content, after e before">
+  <meta name="keywords" content="exemplos">
+  <title>Document</title>
+</head>
+
+<style>
+  div {
+    border: 3px solid red;
+    padding: 25px;
+    margin: 25px;
+    position: relative;
+
+  }
+
+  div::before {
+    content: "before: ";
+  }
+
+  div::after {
+    content: "";
+    background: red;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+  }
+</style>
+
+<body>
+
+  <div>Texto principal</div>
+
+  <article>
+    <h3>titulo</h3>
+    <p>paragrafo <a href="#"> link com <b>negrito</b></a></p>
+    <p>paragrafo <a href="#"> link com <b>negrito</b></a></p>
+    <p>paragrafo <a href="#"> link com <b>negrito</b></a></p>
+  </article>
+
+  <article>
+    <h3>titulo</h3>
+    <p>paragrafo <a href="#"> link com <b>negrito</b></a></p>
+    <p>paragrafo <a href="#"> link com <b>negrito</b></a></p>
+    <p>paragrafo <a href="https://anonmedia.com.br/"> link com <b>negrito</b></a></p>
+  </article>
+
+</body>
+
+</html>
