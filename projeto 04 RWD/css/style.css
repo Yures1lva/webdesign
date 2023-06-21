@@ -1,0 +1,75 @@
+html {
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  background: #58c4c4;
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #37a0a0;
+}
+
+.top-header {
+  text-align: center;
+}
+
+.top-header-logo {
+  margin: 0.5em;
+  height: 40px;
+}
+
+.top-nav {
+  background: #612694;
+  text-align: center;
+}
+
+.top-nav ul {
+  margin: 0;
+  padding: 0.5em;
+  list-style: none;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  display: block;
+}
+
+.top-nav a:hover {
+  background: #7c3792;
+}
+
+.top-content {
+  padding: 1em;
+  text-align: center;
+  background: #f6f6f6;
+}
+
+.top-content-title {
+  color: #612674;
+  font-size: 1.375em;
+  margin: 1.735em;
+}
+
+.top-content-subtitle {
+  color: #a87bb7;
+  font-size: 1em;
+  line-height: 1.3;
+}
