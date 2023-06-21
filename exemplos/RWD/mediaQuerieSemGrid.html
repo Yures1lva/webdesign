@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="" Yuro>
+  <meta name="descript" content="Descrição da página">
+  <meta name="keywords" content="html5, tecnologia">
+
+  <title>Document</title>
+</head>
+<style>
+  body {
+    background: wheat;
+    font-size: 16px;
+  }
+
+  .container {
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .container div {
+    background: #ccc;
+    margin-bottom: 15px;
+    height: 150px;
+    border-radius: 5px;
+    font-size: 22px;
+
+  }
+
+  .clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  @media screen and (min-width: 430px) {
+    body {
+      background: rosybrown;
+    }
+
+    .container div {
+      width: 48%;
+      float: left;
+      margin: 1%;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    body {
+      background: silver;
+    }
+
+    .container div {
+      align-content: space-between;
+      width: 22.9%;
+      float: left;
+      margin: 1%;
+    }
+  }
+</style>
+
+<body>
+
+  <h1>Exemplo de media que</h1>
+
+  <p>Paragrafo qualquer</p>
+
+  <div class="container clearfix">
+    <div>div 1</div>
+    <div> div 2</div>
+    <div> div 3</div>
+    <div> div 3</div>
+  </div>
+
+</body>
+
+</html>
