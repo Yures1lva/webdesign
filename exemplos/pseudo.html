@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="nome que aparece nas pesquisas do google">
+  <meta name="keywords" content="exemplo pseudo">
+  <title>Document</title>
+</head>
+<style>
+  input[type="checkbox"] {
+    width: 50px;
+    height: 50px;
+  }
+
+  input[type="checkbox"]:checked {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  button:disabled {
+    background: blue;
+  }
+
+  p {
+    color: brown;
+
+  }
+
+  p:empty::before {
+    content: "paragrafo vazio";
+  }
+</style>
+
+<body>
+  <label for="">
+    <input type="checkbox" value="sim"> Aceito o contrato
+  </label>
+
+  <button>vai</button>
+  <button disabled>volta</button>
+  <hr>
+  <p>aloha</p>
+  <p> </p>
+  <p></p>
+
+
+</body>
+
+</html>

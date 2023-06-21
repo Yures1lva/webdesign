@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  body {
+    font-family: sans-serif;
+  }
+
+  a[target="_blank"]:after {
+    content: url(img/img.png);
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  a[href$='.pdf']:before {
+    content: url(img/pdf.jpg);
+    display: inline-block;
+    margin-right: 5px;
+  }
+</style>
+
+<body>
+  <h1>
+    estrutura báscia, adicionando uma imagem com content em before ou after
+  </h1>
+
+  <a href="http://serfrontend.com" target="_blank">link externo</a><br>
+  <a href="qq.pdf">download do PDF</a>
+</body>
+
+</html>

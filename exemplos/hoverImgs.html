@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hover em imagens</title>
+</head>
+
+<style>
+  a {
+    position: relative
+  }
+
+  a img {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    display: block;
+  }
+
+  a::before {
+
+    content: "";
+    position: absolute;
+    transition: all ease .3s;
+    width: 100px;
+    height: 100px;
+
+  }
+
+  a:hover:before {
+    background: rgb(0, 0, 0, .5);
+  }
+
+
+  a:hover:after {
+    content: "veja mais";
+    display: block;
+    border: 3px solid white;
+    top: 40px;
+    left: 20px;
+    /* transform: translate(-50px, -50px); */
+    text-align: center;
+    position: absolute;
+    color: aliceblue;
+
+
+  }
+</style>
+
+<body>
+  <article>
+    <a href="">
+      <img src="img/pdf.jpg" alt="pdf">
+    </a>
+  </article>
+
+  <article>
+    <a href="">
+      <img src="img/pdf.jpg" alt="pdf">
+    </a>
+  </article>
+  <article>
+    <a href="">
+      <img src="img/pdf.jpg" alt="pdf">
+    </a>
+  </article>
+</body>
+
+</html>
