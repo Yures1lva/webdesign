@@ -1,6 +1,7 @@
 /* layout para tablet 780px ou fazendo o calculo
 780px / 16px = 48,75em*/
 @media screen and (min-width: 600px) {
+  /* grid do header retirado de  grid.layoutit.com*/
   .top-header {
     display: grid;
     grid-auto-flow: column;
@@ -18,6 +19,8 @@
     background: white;
     grid-area: 1 / 6 / 2 / 12;
   }
+
+  /* fim do grid */
 
   .top-nav ul {
     display: flex;
