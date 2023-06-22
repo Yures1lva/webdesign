@@ -1,0 +1,47 @@
+/* layout para tablet 780px ou fazendo o calculo
+780px / 16px = 48,75em*/
+@media screen and (min-width: 600px) {
+  .top-header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.7fr 0.3fr;
+    gap: 0px 0px;
+  }
+
+  .top-header-logo {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .top-nav {
+    text-align: center;
+    background: white;
+    grid-area: 1 / 6 / 2 / 12;
+  }
+
+  .top-nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .top-nav a {
+    color: #612694;
+  }
+
+  .top-nav a:hover {
+    background: #7b379233;
+    color: #521a66;
+    border-radius: 0.2em;
+  }
+
+  /* menu inicial */
+  .top-content {
+    background: #521a66;
+    color: white;
+  }
+
+  .top-content-title,
+  .top-content-subtitle {
+    color: white;
+  }
+}
