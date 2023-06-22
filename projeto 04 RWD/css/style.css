@@ -78,3 +78,15 @@ h6 {
   height: 100px;
   color: #612674;
 }
+
+.middle-content {
+  padding: 2em;
+  background: #f6f6f6;
+  text-align: center;
+}
+
+.middle-content img {
+  width: 30%;
+  height: auto;
+  color: #612694;
+}
