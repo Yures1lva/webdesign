@@ -14,6 +14,12 @@ h6 {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.clearfix:after {
+  content: "";
+  display: flex;
+  clear: both;
+}
+
 /* menu superior */
 .top-header {
   text-align: center;
@@ -77,6 +83,7 @@ h6 {
 }
 
 .middle-content img {
+  transition: ease 0.3s all;
   width: 3.5em;
   height: auto;
 }
@@ -113,7 +120,8 @@ h6 {
 }
 
 .main-content-article {
-  margin-bottom: 3.5em;
+  margin-bottom: 1.5em;
+  margin-top: 3em;
 }
 
 /* footer */

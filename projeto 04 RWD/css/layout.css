@@ -47,4 +47,25 @@
   .top-content-subtitle {
     color: white;
   }
+
+  .middle-content {
+    padding: 0;
+  }
+
+  .col-1_4 {
+    transition: ease 0.3s all;
+    width: 40%;
+    margin: 5%;
+    float: left;
+  }
+
+  .row:after {
+    content: "";
+    display: flex;
+    clear: both;
+  }
+
+  .main-content-article .button {
+    float: right;
+  }
 }
