@@ -1,6 +1,6 @@
 /* layout para tablet 780px ou fazendo o calculo
 780px / 16px = 48,75em*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 48.75em) {
   /* grid do header retirado de  grid.layoutit.com*/
   .top-header {
     display: grid;
