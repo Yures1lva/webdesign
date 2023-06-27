@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="nome que aparece nas pesquisas do google">
+  <meta name="keywords" content="Grids 01">
+  <title>Document</title>
+</head>
+
+<style>
+  .flexbox {
+    height: 250px;
+    border: 1px solid red;
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .flexbox div {
+    background: orange;
+    width: 300PX;
+    margin: 15PX;
+  }
+
+  .flexbox:nth-child(1) {
+    flex-flow: row wrap;
+  }
+
+  .flexbox:nth-child(2) {
+    justify-content: space-between;
+  }
+
+  .flexbox:nth-child(2) div {
+    width: 20px;
+  }
+
+  .flexbox:nth-child(3) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flexbox:nth-child(3) div {
+    width: 20px;
+  }
+
+  .flexbox:nth-child(4) {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .flexbox:nth-child(4) div {
+    width: 200px;
+    font-size: 3em;
+  }
+
+  .flexbox:nth-child(4) div:nth-child(1) {
+    align-self: stretch;
+  }
+
+  .flexbox:nth-child(4) div:nth-child(2) {
+    align-self: flex-end;
+  }
+
+  .flexbox:nth-child(4) div:nth-child(3) {
+    align-self: center;
+  }
+
+  .flexbox:nth-child(4) div:nth-child(4) {
+    align-self: flex-start;
+  }
+
+  .flexbox:nth-child(5) {
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .flexbox:nth-child(5) div {
+    flex-basis: 70px;
+    /* font-size: 3em; */
+  }
+</style>
+
+<body>
+  <div class="flexbox">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+
+  <div class="flexbox">
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+  </div>
+</body>
+
+</html>
