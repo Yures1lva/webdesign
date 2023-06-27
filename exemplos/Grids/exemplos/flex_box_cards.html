@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="nome que aparece nas pesquisas do google">
+  <meta name="keywords" content="Card com grid">
+  <title>Document</title>
+</head>
+<style>
+  .cardContainer {
+    display: flex;
+  }
+
+  .cardFlex {
+    border: 1px solid black;
+    border-radius: .5em;
+    width: 30%;
+    padding: 10px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardFlex p {
+    flex-grow: 1;
+  }
+
+  .cardFlex button {
+    align-self: flex-start;
+    width: 60%;
+    height: 2em;
+  }
+</style>
+
+<body>
+
+  <h2>Display Flex</h2>
+  <p>Acomodar ou distribuir elementos de modo fácil</p>
+  <p>Ajuda a centralizar na vertical</p>
+
+  <section class="cardContainer">
+
+    <article class="cardFlex">
+      <h3>título</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum ducimus minima accusantium
+        quisquam aliquid quod. Asperiores a sequi enim quo, voluptate temporibus. Placeat, dignissimos. At laboriosam
+        possimus est delectus?</p>
+      <button>Vai</button>
+    </article>
+
+    <article class="cardFlex">
+      <h3>título</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum ducimus minima accusantium
+        quisquam aliquid quod?</p>
+      <button>Vai</button>
+    </article>
+
+    <article class="cardFlex">
+      <h3>título</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum ducimus minima ?</p>
+      <button>Vai</button>
+    </article>
+
+    <article class="cardFlex">
+      <h3>título</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolorum ducimus minima ?</p>
+      <button>Vai</button>
+    </article>
+
+  </section>
+
+
+</body>
+
+</html>
