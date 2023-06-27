@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="nome que aparece nas pesquisas do google">
+  <meta name="keywords" content="Grid">
+  <title>Grid</title>
+</head>
+<style>
+  .gridContainer {
+    width: 500px;
+
+    border-radius: .1em;
+    background: #ccc;
+  }
+
+  .gridItem {
+    background: #999;
+    font-size: 2em;
+    font-family: sans-serif;
+    padding: 5px 15px;
+    border-radius: .1em;
+
+  }
+
+  .gridItem:nth-child(even) {
+    background: #999;
+    color: white;
+  }
+
+  .gridItem:nth-child(odd) {
+    background: #eee;
+  }
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    grid-gap: .5em;
+
+  }
+</style>
+
+<body>
+
+  <h2>Grid Layout</h2>
+  <div class="gridContainer">
+    <div class="gridItem">1</div>
+    <div class="gridItem">2</div>
+    <div class="gridItem">3</div>
+    <div class="gridItem">4</div>
+    <div class="gridItem">5</div>
+    <div class="gridItem">6</div>
+
+  </div>
+
+
+</body>
+
+</html>
