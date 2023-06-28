@@ -21,7 +21,7 @@
   .gridItem {
     background-color: orange;
     padding: 15px;
-    border-radius: .5em;
+    border-radius: .2em;
     font-family: sans-serif;
   }
 
@@ -30,30 +30,41 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px 50px 1fr 50px;
     gap: 8px;
+
+    grid-template-areas:
+      "header  header header"
+      "nav     nav    aside"
+      "main    main  aside"
+      "footer  footer aside";
   }
 
   .header {
-    grid-column: 1 / -1;
+    /* grid-column: 1 / -1; */
+    grid-area: header;
 
   }
 
   .nav {
-    grid-column: 1/3;
+    grid-area: nav;
+    /* grid-column: 1/3; */
   }
 
   .aside {
-    grid-row: 2 / -1;
-    grid-column: 3 / 4;
+    grid-area: aside;
+    /* grid-row: 2 / -1;
+    grid-column: 3 / 4; */
   }
 
   .main {
-    grid-column: 1 / 3;
+    grid-area: main;
+    /* grid-column: 1 / 3; */
     min-height: 300px;
   }
 
   .footer {
-    grid-column: 1 / -2;
-    grid-row: 4 / 5;
+    grid-area: footer;
+    /* grid-column: 1 / -2;
+    grid-row: 4 / 5; */
   }
 </style>
 
