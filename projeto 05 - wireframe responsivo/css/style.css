@@ -1,0 +1,76 @@
+body {
+  margin-top: 0px;
+  padding: 0px;
+}
+
+header {
+  padding-top: 15px;
+  background: #d9d9d9;
+  height: 325px;
+}
+
+.nav {
+  display: grid;
+  grid-template-rows: [logo-start] 60px [logo-end ul-start] 230px [ul-end];
+  gap: 8px;
+  margin: 0 20px;
+}
+
+.logo-nav {
+  background: #bfbfbf;
+  padding-top: 0.5em;
+  margin: 0 auto;
+  text-align: center;
+  height: 2em;
+  grid-row: logo;
+  width: 161px;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-row: ul;
+  grid-template-rows: [item1-start] 40px [item1-end item2-start] 40px [item2-end item3-start] 40px [item3-end item4-start] 40px [item4-end item5-start] 40px [item5-end];
+  gap: 10px;
+}
+
+.nav ul li {
+  text-align: center;
+  background: #bfbfbf;
+  list-style: none;
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 0.6em;
+  height: 2em;
+}
+
+.item1 {
+  grid-row: item1;
+  width: 250px;
+}
+
+.item2 {
+  grid-row: item2;
+  width: 250px;
+}
+
+.item3 {
+  width: 250px;
+  grid-row: item3;
+}
+.item4 {
+  grid-row: item4;
+  width: 250px;
+}
+.item5 {
+  grid-row: item5;
+  width: 350px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
