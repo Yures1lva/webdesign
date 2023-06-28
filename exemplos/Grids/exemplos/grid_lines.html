@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="nome que aparece nas pesquisas do google">
+  <meta name="keywords" content="Grid">
+  <title>Grid_layout example</title>
+</head>
+
+<style>
+  .gridContainer {
+    width: 90%;
+    background: #ccc;
+    margin: 30px auto;
+    border-radius: .2em;
+  }
+
+  .gridItem {
+    background-color: orange;
+    padding: 15px;
+    border-radius: .2em;
+    font-family: sans-serif;
+  }
+
+  /* dando nomes as Grid linhas para se trabalhar com elas no layout  */
+  .gridContainer {
+    display: grid;
+    /* grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end]; melhor solução abaixo */
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+    grid-template-rows: [header-start] 100px [header-end nav-start] 50px [nav-end main-start] 1fr [main-end footer-start] 50px [footer-end];
+    gap: 8px;
+
+  }
+
+  .header {
+    /* grid-column: 1 / -1; */
+    /* grid-column: col1-start / col3-end; melhor solução em baixo*/
+    grid-column: col-start 1 / col-end 3;
+
+    /* grid-row: header-start / header-end; pode ser substituido por apenas header */
+    grid-row: header;
+
+  }
+
+  .nav {
+    grid-column: col-start 1 / col-end 3;
+    grid-row: nav
+      /* mesma coisa no header*/
+  }
+
+  .aside {
+    grid-row: main-start / footer-end;
+    grid-column: col-start 3 / col-end 3;
+  }
+
+  .main {
+    grid-column: col-start 1 / col-end 2;
+    grid-row: main;
+    min-height: 300px;
+  }
+
+  .footer {
+    grid-column: col-start 1 / col-end 3;
+    grid-row: footer;
+  }
+</style>
+
+<body>
+
+  <h2>Grid Layout</h2>
+
+  <div class="gridContainer">
+    <header class="header gridItem">header</header>
+    <nav class="nav gridItem">nav</nav>
+    <aside class="aside gridItem">aside</aside>
+    <main class="main gridItem">main</main>
+    <footer class="footer gridItem">footer</footer>
+  </div>
+
+</body>
+
+</html>
