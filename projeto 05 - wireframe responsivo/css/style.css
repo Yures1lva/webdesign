@@ -17,6 +17,7 @@ header {
 }
 
 .logo-nav {
+  border-radius: 0.2em;
   background: #bfbfbf;
   padding-top: 0.5em;
   margin: 0 auto;
@@ -27,7 +28,6 @@ header {
 }
 
 .nav ul {
-  list-style-type: none;
   padding: 0;
   margin: 0;
   display: grid;
@@ -37,6 +37,7 @@ header {
 }
 
 .nav ul li {
+  border-radius: 0.2em;
   text-align: center;
   background: #bfbfbf;
   list-style: none;
@@ -67,10 +68,52 @@ header {
 }
 .item5 {
   grid-row: item5;
-  width: 350px;
+  min-width: 300px;
+  max-width: 350px;
 }
 
 .nav a {
   text-decoration: none;
   color: black;
+}
+
+.top-content {
+  margin-top: 30px;
+}
+
+.text-top-content {
+  background: #d9d9d9;
+  padding: 30%;
+  display: block;
+  text-align: center;
+  margin: 0px 30px;
+  border-radius: 0.2em;
+}
+
+.form-top-content {
+  display: flex;
+  border: none;
+  justify-content: center;
+}
+
+.form-top-content fieldset {
+  border: none;
+}
+
+.form-top-content input {
+  box-sizing: border-box;
+  display: flex;
+  min-width: 300px;
+  max-width: 350px;
+  height: 3em;
+}
+
+input {
+  background: #d9d9d9;
+  display: block;
+  border: none;
+  justify-content: center;
+  border-radius: 0.2em;
+  margin: 5px auto;
+  height: 3em;
 }

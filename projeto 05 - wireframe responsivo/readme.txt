@@ -1,3 +1,2 @@
-corrigir bugs da nav, n funciona em todos os aparelhos
-pesquisar sobre tamanhos responsivos
-bug encontrado nos tamanhos setados em px
+criar responsividade para uma bomba de celular 
+chamado galaxy fold, pois o site quebra
