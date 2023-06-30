@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>01</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+  // parsInt converte string em inteiro
+  var a = parseInt(prompt("jogador 1 digite um numero"))
+  var b = parseInt(prompt("jogador 2 digite um numero"))
+
+  function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  ganhador = getRandomArbitrary(0, 1)
+
+  alert("o número sorteado foi" + ganhador)
+
+  if (a == b) {
+    alert("deu empate ")
+
+  } else if (ganhador == a) {
+    alert("jogador 1 ganhou ")
+  } else if (ganhador == b) {
+    alert("jogador 2 ganhou ")
+  }
+</script>
+
+</html>5
