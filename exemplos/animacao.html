@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yuro">
+  <meta name="descript" content="animation">
+  <meta name="keywords" content="html, css, responsivo">
+  <title>animações</title>
+</head>
+
+<style>
+  #anima-time div {
+    width: 50px;
+    height: 25px;
+    border: 3px solid red;
+    margin: 15px;
+
+  }
+
+  @keyframes anda {
+    0% {
+      transform: translateX(0);
+      background: yellow;
+    }
+
+    25% {
+      height: 80px;
+    }
+
+    75% {
+      height: 100px;
+    }
+
+    100% {
+      background: green;
+      transform: translateX(400px);
+    }
+  }
+
+  #anima-time div:nth-child(1) {
+    animation: anda 1s linear;
+  }
+
+  #anima-time div:nth-child(2) {
+    animation: anda 2s ease-in-out infinite alternate;
+  }
+
+  #anima-time div:nth-child(3) {
+    /* nome da animação, suração total, forma, delay, quantas x se repete, direção*/
+    animation: anda 2s ease-in-out 1s infinite alternate;
+
+  }
+
+  #anima-time div:nth-child(4) {
+    background: red;
+    /* nome da animação, suração total, forma, delay, quantas x se repete, direção*/
+    animation: anda 2s ease-in-out 1s 2 alternate;
+    animation-fill-mode: backwards;
+
+  }
+
+  #anima-time div:nth-child(5) {
+    background: red;
+    /* nome da animação, suração total, forma, delay, quantas x se repete, direção*/
+    animation: anda 2s ease-in-out 1s infinite alternate;
+    /* name  duration  timing-fuction  delay  iteratio-count  fill-mode   play-state   */
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+
+  }
+
+  #anima-time div:nth-child(5):hover {
+    animation-play-state: paused;
+    width: 80px;
+    height: 55px;
+  }
+</style>
+
+<body>
+
+  <h2>animation</h2>
+  <div id="anima-time">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+</body>
+
+</html>
