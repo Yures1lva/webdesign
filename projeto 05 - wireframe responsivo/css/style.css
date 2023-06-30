@@ -103,8 +103,7 @@ header {
 .form-top-content input {
   box-sizing: border-box;
   display: flex;
-  min-width: 300px;
-  max-width: 350px;
+  min-width: 320px;
   height: 3em;
 }
 
@@ -119,40 +118,35 @@ input {
 }
 
 .main-content {
-  margin-top: 30px;
+  margin: 15px 0 15px 0;
 }
 
-/* tudo errado, talvez seja feita novo html */
-
-.card-main-content {
-  background-color: #d9d9d9;
-  width: 300px;
+.card-main {
+  border-radius: 0.2em;
   height: 281px;
-  margin: 15px auto;
-  border-radius: 0.2em;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 40px;
-}
-
-.top-card-main {
-  grid-column: 1/2;
-  background-color: #bfbfbf;
-}
-
-.left-top-card {
+  margin: 0 30px;
+  min-width: 320px;
+  background: #d9d9d9;
   display: grid;
-  grid-template-rows: 1fr 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 70px;
 }
 
-.left-top-card h3 {
-  grid-row: 1/3;
-  background-color: #d9d9d9;
+.card-left-content {
   border-radius: 0.2em;
-}
-
-.left-top-card p {
-  grid-row: 3/4;
+  margin: 8px 4px 4px 8px;
   background-color: #bfbfbf;
+}
+
+.card-right-content {
   border-radius: 0.2em;
-  height: 20px;
+  margin: 8px 8px 4px 4px;
+  background-color: #bfbfbf;
+}
+
+.card-bottom-content {
+  border-radius: 0.2em;
+  margin: 4px 8px 8px 8px;
+  background-color: #bfbfbf;
+  grid-column: 1/3;
 }
