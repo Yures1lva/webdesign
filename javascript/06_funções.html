@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Lógica de programação com JS</h1>
+
+
+  <button onclick="mostrarTabuada()">Criar tabuada</button>
+  <button onclick="limparTabuada()">Limpar tabuada</button>
+  <div id="output"></div>
+
+  <script>
+
+    var output = document.querySelector("#output")
+    var mensagem = ''
+
+    function mostrarTabuada() {
+      var n = parseInt(prompt("digite um numero"))
+      var i = 0
+      while (i <= 10) {
+        mensagem += n + ' x ' + i + ' =' + (n * i) + ' <br>'
+        i++
+      }
+      output.innerHTML = mensagem
+    }
+
+    function limparTabuada() {
+      mensagem = ''
+      output.innerHTML = mensagem
+    }
+
+
+  </script>
+</body>
+
+</html>

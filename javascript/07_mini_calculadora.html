@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Lógica de programação com JS</h1>
+
+
+  <button onclick="subtracao()">-</button>
+  <button onclick="soma()">+</button>
+  <button onclick="div()">/</button>
+  <button onclick="mul()">x</button>
+  <div id="output"></div>
+
+  <script>
+
+    var output = document.querySelector("#output")
+    var mensagem = ''
+    var n = parseInt(prompt("digite um numero"))
+    output.innerHTML = n
+
+    function subtracao() {
+      var mensagem = parseInt(prompt(n + " menos: "))
+      n = n - mensagem
+      output.innerHTML = n
+    }
+
+    function soma() {
+      var mensagem = parseInt(prompt(n + " mais: "))
+      n = n + mensagem
+      output.innerHTML = n
+    }
+
+    function div() {
+      var mensagem = parseInt(prompt(n + " dividido por: "))
+      n = n / mensagem
+      output.innerHTML = n
+    }
+
+
+    function mul() {
+      var mensagem = parseInt(prompt(n + " multiplicado por: "))
+      n = n * mensagem
+      output.innerHTML = n
+    }
+    function limparTabuada() {
+      n = ''
+      output.innerHTML = n
+    }
+
+
+  </script>
+</body>
+
+</html>
