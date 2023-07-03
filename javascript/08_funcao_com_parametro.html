@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Lógica de programação com JS</h1>
+
+
+  <button onclick="calcular('-')">-</button>
+  <button onclick="calcular('+')">+</button>
+  <button onclick="calcular('/')">/</button>
+  <button onclick="calcular('*')">x</button>
+  <div id="output"></div>
+
+  <script>
+
+    var n1 = parseFloat(prompt('digite um numero'))
+
+    escreve()
+    function escreve() {
+      var output = document.querySelector("#output")
+      output.innerHTML = n1
+    }
+
+    function calcular(simbolo) {
+      var n = parseInt(prompt("digite um para realizar a operação de " + simbolo))
+
+      switch (simbolo) {
+        case '-':
+          n1 -= n
+          break;
+        case '+':
+          n1 += n
+          break;
+        case '/':
+          n1 /= n
+          break;
+        case '*':
+          n1 *= n
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="mostraAreaAletr()">mostrar área</button>
+  <button onclick="mostraAreaOutput()">mostrar área no out2put</button>
+
+  <div id="output"></div>
+</body>
+<script>
+  var largura = parseFloat(prompt('digite a largura'))
+  var altura = parseFloat(prompt('digite a altura'))
+
+  function mostraAreaAletr() {
+    var area = calcArea(largura, altura)
+    alert('a área total é ' + area)
+  }
+  function mostraAreaOutput() {
+    var area = calcArea(largura, altura)
+    document.querySelector("#output").innerHTML = 'a área total é ' + area
+
+  }
+
+  function calcArea(largura, altura) {
+    return largura * altura
+  }
+
+
+</script>
+
+</html>
