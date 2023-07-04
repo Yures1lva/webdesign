@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="mostraAreaAletr()">mostrar área</button>
+  <button onclick="mostraAreaOutput()">mostrar área no output</button>
+
+  <div id="output"></div>
+</body>
+<script>
+  var largura = parseFloat(prompt('digite a largura'))
+  var altura = parseFloat(prompt('digite a altura'))
+
+  function mostraAreaAletr() {
+    try {
+      var area = calcArea(largura, altura)
+
+    } catch (e) {
+      alert(e)
+      return
+    }
+    alert('a área total é ' + area)
+  }
+  function mostraAreaOutput() {
+    try {
+      var area = calcArea(largura, altura)
+    } catch (e) {
+      alert(e)
+      return
+    }
+    document.querySelector("#output").innerHTML = 'a área total é ' + area
+
+  }
+
+  mostraAreaAletr()
+
+  function calcArea(largura, altura) {
+
+
+    if (largura === undefined || largura === undefined) {
+      throw new Error('digite um número')
+    }
+    if (isNaN(largura) || isNaN(altura)) {
+      throw new Error('digite um numero válido')
+    }
+    return largura * altura
+  }
+
+
+</script>
+
+</html>
