@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Lógica de programação com JS</h1>
+
+
+  <button onclick="iniciarCalculo('-')">-</button>
+  <button onclick="iniciarCalculo('+')">+</button>
+  <button onclick="iniciarCalculo('/')">/</button>
+  <button onclick="iniciarCalculo('*')">x</button>
+  <div id="output"></div>
+
+  <script>
+
+    var n2 = parseFloat(prompt('digite um numero'))
+
+    escreve(n2)
+
+
+    function iniciarCalculo(simbolo) {
+      var n1 = parseFloat(document.querySelector('#output').textContent)
+      var n2 = parseFloat(prompt('digite outro número'))
+
+      try {
+        var msg = calcular(simbolo, n1, n2)
+      } catch (e) {
+        alert(e)
+        return
+      }
+
+      escreve(msg)
+    }
+
+
+    function escreve(mensagem) {
+      var output = document.querySelector("#output")
+      output.innerHTML = mensagem
+    }
+
+    // var n = parseInt(prompt("digite um para realizar a operação de " + simbolo))
+
+    function calcular(simbolo, n1, n2) {
+
+      if (simbolo !== '+' & simbolo !== '-' & simbolo !== '/' & simbolo !== '*') {
+        throw new Error("digite um símbolo válido")
+      }
+
+      if (isNaN(n1) || isNaN(n2)) {
+        throw new Error('digite um número válido !')
+      }
+      var numeroCalculado = null
+      switch (simbolo) {
+        case '-':
+          numeroCalculado = n1 - n2
+          break;
+        case '+':
+          numeroCalculado = n1 + n2
+          break;
+        case '/':
+          numeroCalculado = n1 / n2
+          break;
+        case '*':
+          numeroCalculado = n1 * n2
+      }
+      return numeroCalculado
+    }
+  </script>
+</body>
+
+</html>
