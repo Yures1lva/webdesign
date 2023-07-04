@@ -78,7 +78,8 @@ header {
 }
 
 .top-content {
-  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .text-top-content {
@@ -116,9 +117,14 @@ input {
   margin: 5px auto;
   height: 3em;
 }
+input:nth-child(2) {
+  margin: 10px auto;
+  width: 90%;
+  height: 60px;
+}
 
 .main-content {
-  margin: 15px 0 15px 0;
+  margin: 25px 0 15px 0;
 }
 
 .card-main {
@@ -172,6 +178,10 @@ input {
   border-radius: 0.2em;
   background-color: #bfbfbf;
   margin: 4px;
+}
+
+.bottom-content {
+  margin: 45px 0;
 }
 
 .card-bottom-content {
@@ -231,6 +241,7 @@ input {
 }
 
 .footer {
+  margin: 0;
   background-color: #d9d9d9;
 }
 
