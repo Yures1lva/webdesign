@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Objetos</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+</body>
+
+<script>
+
+  var user1 = new Object()
+  user1.nome = 'jaum'
+  user1.email = 'jaum@server.com'
+
+  var user2 = new Object()
+  user2.nome = 'carlin'
+  user2.email = 'carlin@server.com'
+
+  var user3 = new Object()
+  user3.nome = 'julin'
+  user3.email = 'julin@server.com'
+
+
+  var users = new Array(user1, user2, user3)
+
+  console.log(users)
+
+  var msg = ''
+  var i = 0
+  while (users[i]) {
+
+    msg += ' <h2>nome: ' + users[i].nome + '</h2>' + '<p>email: ' + users[i].email + '</p><br>'
+
+    i++
+  }
+
+  escreve(msg)
+
+  //função que escreve na tag com id output
+  function escreve(msg) {
+    var saida = document.querySelector("#output").innerHTML = msg
+  }
+
+</script>
+
+
+</html>

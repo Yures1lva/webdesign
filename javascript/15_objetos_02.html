@@ -7,7 +7,7 @@
   <meta name="atuthor" content="Yuro">
   <meta name="descript" content="arquivo base">
   <meta name="keywords" content="html, js">
-  <title>Document</title>
+  <title>objetos 2</title>
 </head>
 
 <body>
@@ -18,7 +18,28 @@
 
 <script>
 
+  var produtos = [
+    {
+      'nome': 'caneta',
+      'preco': 1.2
+    },
+    {
+      'nome': 'lapis',
+      'preco': 2
+    },
+    {
+      'nome': 'borracha',
+      'preco': 1
+    }]
 
+  var msg = ''
+
+  for (var i = 0; i < produtos.length; i++) {
+    msg += "<h2>Produto: " + produtos[i].nome + " </h2>"
+    msg += "<p> Preço: R$" + produtos[i].preco + "</p>"
+  }
+
+  escreve(msg)
   //função que escreve na tag com id output
   function escreve(msg) {
     var saida = document.querySelector("#output").innerHTML = msg
