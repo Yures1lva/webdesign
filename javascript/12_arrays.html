@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Arrays</title>
+</head>
+
+<body>
+  <div id="output"></div>
+</body>
+
+<script>
+  var produtos = new Array('caneta', 'lapis', 'caderno', 'livro', 'tesoura')
+  var msg = ''
+  var output = document.querySelector('#output')
+
+  for (var i = 0; i < produtos.length; i++) {
+    msg += 'produto ' + (i + 1) + ': ' + produtos[i] + '<br>'
+  }
+  output.innerHTML = msg
+
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Objetos</title>
+</head>
+
+<body>
+  <div id="output"></div>
+</body>
+
+<script>
+
+  var produto = Object()
+
+  produto.nome = "caneta"
+  produto.preco = 2.5
+  produto.cor = "azul"
+  produto.estoque = 5
+
+  var msg = ''
+
+  msg += 'nome: ' + produto.nome + '<br>'
+  msg += 'preco: ' + produto.preco + '<br>'
+  msg += 'cor: ' + produto.cor + '<br>'
+  msg += 'estoque: ' + produto.estoque + '<br>'
+
+  escreve(msg)
+
+  function escreve(msg) {
+    var saida = document.querySelector("#output").innerHTML = msg
+  }
+
+</script>
+
+
+</html>
