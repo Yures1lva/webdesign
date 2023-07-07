@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Lógica de programação com JS</h1>
+
+
+  <button onclick="mostrarTabuada()">Criar tabuada</button>
+  <button onclick="limparTabuada()">Limpar tabuada</button>
+  <div id="output"></div>
+
+  <script>
+
+
+    //arguments são os argumentos recebidos pela função
+    function somar() {
+      var x = 0
+      var result = 0
+      while (arguments[x]) {
+        result += arguments[x]
+        x++
+      }
+      console.log(result)
+    }
+    somar(20, 30, 50, 40)
+
+  </script>
+</body>
+
+</html>

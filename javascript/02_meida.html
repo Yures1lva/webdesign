@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Lógica de programação com JS</h1>
+
+
+  <button onclick="mostrarTabuada()">Criar tabuada</button>
+  <button onclick="limparTabuada()">Limpar tabuada</button>
+  <div id="output"></div>
+
+  <script>
+
+    (function () {
+      function calcularMedia() {
+        var qtd = arguments.length
+        var total = 0
+        var x = 0
+
+        while (typeof arguments[x] === 'number') {
+          total += arguments[x]
+          x++
+        }
+        console.log("o total é " + total)
+        return total / qtd
+      }
+
+
+      var media1 = calcularMedia(2, 3)
+      var media2 = calcularMedia(2, 3, 10, 6)
+
+      console.log(media1)
+      console.log(media2)
+
+    }())
+  </script>
+</body>
+
+</html>
