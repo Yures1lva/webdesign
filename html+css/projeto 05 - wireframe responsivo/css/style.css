@@ -25,7 +25,7 @@ header {
   text-align: center;
   height: 2em;
   grid-row: logo;
-  width: 161px;
+  width: 50%;
 }
 
 .nav ul {
@@ -47,30 +47,32 @@ header {
   margin: 0 auto;
   padding-top: 0.6em;
   height: 2em;
+  
 }
 
 .item1 {
   grid-row: item1;
-  width: 250px;
+  width: 70%;
 }
 
 .item2 {
   grid-row: item2;
-  width: 250px;
+   width: 70%;
 }
 
 .item3 {
-  width: 250px;
+   width: 70%;
+  min-width: 180px;
   grid-row: item3;
 }
 .item4 {
   grid-row: item4;
-  width: 250px;
+  width: 70%;
 }
 .item5 {
   grid-row: item5;
-  min-width: 300px;
-  max-width: 350px;
+  min-width: 70%;
+  width: 100%
 }
 
 .nav a {
@@ -88,11 +90,13 @@ header {
 
 .text-top-content {
   background: #d9d9d9;
-  padding: 30%;
+  padding: 30% 0;
   display: block;
   text-align: center;
-  margin: 0px 30px;
+  margin: 0px 10%;
+  width: 80%;
   border-radius: 0.2em;
+  
 }
 
 /* .form-top-content {
@@ -103,6 +107,7 @@ header {
 
 .form-top-content fieldset {
   border: none;
+  
 }
 
 .top-content form {
@@ -112,7 +117,7 @@ header {
 .form-top-content input {
   box-sizing: border-box;
   display: flex;
-  min-width: 320px;
+  width: 70%;
   height: 3em;
   background: #d9d9d9;
   display: block;
@@ -132,14 +137,14 @@ header {
 
 /* conteudo central do site começo */
 .main-content {
-  margin: 25px 0 15px 0;
+  margin: 20px 20px;
 }
 
 .card-main {
   border-radius: 0.2em;
   height: 270px;
-  margin: 10px 30px;
-  min-width: 320px;
+  min-width: 100%;
+  margin: 10% 0 ;
   background: #d9d9d9;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -231,8 +236,12 @@ header {
 }
 
 .bottom-content-bottom {
-  display: grid;
-  grid-template-rows: repeat(4, 1fr) 70px;
+  
+}
+
+.form-bottom-content{
+display: grid;
+grid-template-rows: repeat(4, 1fr) 70px;
 }
 
 .bottom-content-bottom form {
