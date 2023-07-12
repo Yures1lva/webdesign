@@ -70,7 +70,7 @@ header {
 .item5 {
   grid-row: item5;
   min-width: 70%;
-  width: 100%;
+  width: 80%;
 }
 
 .nav a {
