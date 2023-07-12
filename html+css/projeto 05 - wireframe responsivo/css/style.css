@@ -255,50 +255,50 @@ header {
 
 .footer {
   margin: 0;
+  padding-top: 5px;
   background-color: #d9d9d9;
+  display: block;
 }
 
 .left-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 60px 100px;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 .footer-logo {
-  margin: 10px 30px;
   text-align: center;
-  padding-top: 10px;
-  grid-column: 1/3;
-  grid-row: 1/2;
+  margin-top: 10px;
+  height: 30px;
+  width: 60%;
+  padding-top: 15px;
   background-color: #bfbfbf;
   border-radius: 0.2em;
 }
 
 .text-footer {
-  margin: 10px 30px;
+  margin: 10px 0;
   background-color: #bfbfbf;
   border-radius: 0.2em;
-  grid-column: 1/4;
-  grid-row: 2/3;
+  height: 100px;
+  width: 80%;
 }
 
 .right-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 120px 120px;
+  margin: 0 20px;
+  padding-bottom: 10px;
 }
 
 .item1-footer {
-  margin: 10px 30px;
-  grid-column: 1/3;
-  grid-row: 1/2;
   border-radius: 0.2em;
   background-color: #bfbfbf;
+  height: 100px;
+  width: 60%;
 }
 .item2-footer {
-  margin: 10px 30px;
-  grid-column: 1/3;
-  grid-row: 2/3;
+  margin-top: 10px;
   border-radius: 0.2em;
   background-color: #bfbfbf;
+  height: 100px;
+  width: 60%;
 }

@@ -127,6 +127,9 @@
     min-width: 49%;
   }
 
+  /* fim do conteudo principal */
+
+  /* começo do conteudo inferior */
   .card-bottom {
     height: 250px;
   }
@@ -146,10 +149,53 @@
     margin: 10px 0;
     width: 40%;
   }
+
+  /* fim do conteudo inferior  */
+
+  /*footer */
+  .footer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .footer-logo {
+    text-align: center;
+    margin-top: 10px;
+    height: 30px;
+    width: 150px;
+    padding-top: 15px;
+    background-color: #bfbfbf;
+    border-radius: 0.2em;
+  }
+
+  .text-footer {
+    margin: 10px 0;
+    background-color: #bfbfbf;
+    border-radius: 0.2em;
+    height: 185px;
+    width: 100%;
+  }
+
+  .right-footer {
+    margin: 10px 20px 0 20px;
+    padding-bottom: 10px;
+    width: 50%;
+  }
+
+  .item1-footer {
+    margin-top: 10px;
+    height: 130px;
+    width: 100%;
+  }
+  .item2-footer {
+    height: 100px;
+    width: 100%;
+  }
 }
 
-/*800px a 1500px  */
-@media screen and (min-width: 47.875em) and (max-width: 93.75em) {
+/*800px  */
+@media screen and (min-width: 47.875em) {
   /* conteudo do top do site começo */
 
   .bottom-content-bottom form input {
@@ -170,32 +216,53 @@
     min-width: 32.5%;
     margin-right: 1px;
   }
-}
 
-/*1500px+ widescreen  */
-@media screen and (min-width: 93.75em) {
-  /* conteudo do top do site começo */
+  /* footer */
 
-  .card-main {
-    border-radius: 0.2em;
-    height: 270px;
-    min-width: 32.5%;
-    margin-right: 1px;
+  .text-footer {
+    height: 125px;
+    max-width: 500px;
   }
 
-  header {
-    padding: 20px 150px 0 150px;
+  .right-footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .item1-footer {
+    margin: 10px 10px 0 0;
+    height: 180px;
+    width: 100%;
+    max-width: 300px;
+  }
+  .item2-footer {
+    height: 180px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/*1360px+ widescreen  */
+@media screen and (min-width: 85em) {
+  /* conteudo do top do site começo */
+
+  .left-footer {
+    width: 30%;
+  }
+
+  .nav {
+    padding: 0 15% 0 15%;
   }
 
   section {
-    padding: 20px 150px 0 150px;
+    padding: 20px 15% 0 15%;
   }
 
   main {
-    padding: 20px 160px 0 150px;
+    padding: 20px 15% 0 15%;
   }
 
   footer {
-    padding: 20px 150px 0 150px;
+    padding: 20px 15% 0 15%;
   }
 }
