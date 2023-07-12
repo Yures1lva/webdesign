@@ -1,5 +1,5 @@
-/* 560/16 =  35em,  800/16= 48em*/
-
+/* mudanças gerais a partir de 500px */
+/* 560px/16px =  35em*/
 @media screen and (min-width: 35em) {
   /* ta estranhamente funcionando, mas isso deve ser corrigido, 
     ta criando um grid onde não devia*/
@@ -126,11 +126,43 @@
     height: 270px;
     min-width: 49%;
   }
+
+  .card-bottom {
+    height: 250px;
+  }
+
+  .bottom-content-bottom form input {
+    box-sizing: border-box;
+    display: flex;
+    align-self: flex-start;
+    margin: 10px 0;
+  }
+
+  .bottom-content-bottom form input:nth-child(3) {
+    width: 80%;
+  }
+
+  .bottom-content-bottom form input:nth-child(5) {
+    margin: 10px 0;
+    width: 40%;
+  }
 }
 
 /*800px a 1500px  */
 @media screen and (min-width: 47.875em) and (max-width: 93.75em) {
   /* conteudo do top do site começo */
+
+  .bottom-content-bottom form input {
+    width: 60%;
+  }
+
+  .bottom-content-bottom form input:nth-child(3) {
+    width: 70%;
+  }
+
+  .bottom-content-bottom form input:nth-child(5) {
+    width: 40%;
+  }
 
   .card-main {
     border-radius: 0.2em;
