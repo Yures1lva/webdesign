@@ -4,28 +4,17 @@
   /* ta estranhamente funcionando, mas isso deve ser corrigido, 
     ta criando um grid onde não devia*/
 
-  header {
-    height: 60px;
-  }
-
   .nav {
     display: flex;
     margin: 0 20px;
   }
 
   .logo-nav {
-    border-radius: 0.2em;
-    background: #bfbfbf;
-    padding-top: 0.5em;
-    text-align: center;
-    height: 2em;
     width: 100px;
     margin: 10px 0;
   }
 
   .nav ul {
-    padding: 0;
-    margin: 0;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -35,15 +24,13 @@
   .nav ul li {
     margin: 10px 3px;
     width: 70px;
+    padding-top: 0.6em;
   }
 
   .nav ul li:last-child {
-    width: 100px;
-  }
-
-  .nav a {
-    text-decoration: none;
-    color: black;
+    width: 110px;
+    height: 2em;
+    padding-top: 0.6em;
   }
 
   /* conteudo do top do site começo */
@@ -81,18 +68,24 @@
     margin: 0;
     padding: 0;
     height: 48px;
-    margin-right: 2%;
+  }
+
+  .form-top-content input:nth-child(1) {
+    width: 100%;
+    height: 48px;
+    margin: 0 5px 0 0;
   }
 
   .form-top-content input:nth-child(2) {
     height: 48px;
     margin: 0;
     padding: 0;
+    width: 70%;
   }
 
   .top-content-img {
-    width: 48%;
-    margin: 0 3% 0 0;
+    width: 100%;
+    margin: 0 20px 0 0;
     background: #d9d9d9;
     border-radius: 0.2em;
     height: 350px;

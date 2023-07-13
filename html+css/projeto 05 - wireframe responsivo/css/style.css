@@ -6,6 +6,7 @@ body {
 header {
   padding: 15px 0;
   background: #d9d9d9;
+  width: 100%;
 }
 
 /* navbar do site começo */
@@ -16,7 +17,7 @@ header {
 .logo-nav {
   border-radius: 0.2em;
   background: #bfbfbf;
-  padding-top: 0.5em;
+  padding-top: 0.6em;
   margin: 0 auto;
   text-align: center;
   height: 2em;
@@ -37,11 +38,13 @@ header {
   margin: 10px auto;
   width: 60%;
   height: 2em;
-  padding-top: 0.5em;
+  padding-top: 0.6em;
 }
 
 .nav ul li:last-child {
   width: 75%;
+  height: 2.3em;
+  padding-top: 1em;
 }
 
 .nav a {
@@ -62,36 +65,35 @@ header {
   display: block;
   text-align: center;
   padding-top: 180px;
-  margin: 0px 10%;
-  width: 80%;
+  margin: 0px 20px;
   height: 200px;
   border-radius: 0.2em;
 }
 
 .form-top-content fieldset {
   border: none;
-}
-
-.top-content form {
-  width: 100%;
+  margin: 0 20px;
+  padding: 0;
+  text-align: center;
 }
 
 .form-top-content input {
   box-sizing: border-box;
-  display: flex;
-  width: 70%;
-  height: 3em;
   background: #d9d9d9;
-  display: block;
   border: none;
-  justify-content: center;
   border-radius: 0.2em;
-  margin: 5px auto;
+  padding: 0 0;
+}
+
+.form-top-content input:nth-child(1) {
+  margin: 10px auto;
+
+  width: 80%;
+  height: 60px;
 }
 
 .form-top-content input:nth-child(2) {
-  margin: 10px auto;
-  width: 90%;
+  width: 100%;
   height: 70px;
 }
 
@@ -189,7 +191,6 @@ header {
 /* conteudo central do site fim */
 
 /* conteudo inferior do site começo */
-
 .bottom-content {
   margin: 55px 20px;
 }
@@ -204,22 +205,26 @@ header {
   margin: 10px 0;
   width: 100%;
   height: 150px;
+  text-align: center;
+}
+
+.bottom-content-bottom {
+  text-align: center;
 }
 
 .bottom-content-bottom form input {
+  text-align: center;
   box-sizing: border-box;
-  display: flex;
-  margin: 10px auto;
-  width: 70%;
-  height: 3em;
-  background: #d9d9d9;
+  width: 80%;
+  padding: 0;
   border: none;
-  justify-content: center;
+  height: 60px;
+  background: #d9d9d9;
   border-radius: 0.2em;
+  margin: 5px 0;
 }
 
 .bottom-content-bottom form input:nth-child(5) {
-  margin: 10px auto;
   width: 100%;
   height: 70px;
 }
