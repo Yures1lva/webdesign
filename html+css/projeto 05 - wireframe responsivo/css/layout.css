@@ -120,12 +120,12 @@
   .card-bottom {
     height: 250px;
   }
+  .bottom-content-bottom {
+    text-align: start;
+  }
 
   .bottom-content-bottom form input {
-    box-sizing: border-box;
-    display: flex;
-    align-self: flex-start;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
   .bottom-content-bottom form input:nth-child(3) {
