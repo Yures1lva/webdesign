@@ -146,6 +146,12 @@
     flex-direction: row;
   }
 
+  .left-footer {
+    width: 40%;
+    max-width: 300px;
+    margin-right: 100px;
+  }
+
   .footer-logo {
     text-align: center;
     margin-top: 10px;
@@ -167,16 +173,16 @@
   .right-footer {
     margin: 10px 20px 0 20px;
     padding-bottom: 10px;
-    width: 50%;
+    width: 100%;
   }
 
   .item1-footer {
     margin-top: 10px;
-    height: 130px;
+    height: 115px;
     width: 100%;
   }
   .item2-footer {
-    height: 100px;
+    height: 115px;
     width: 100%;
   }
 }
@@ -206,26 +212,30 @@
 
   /* footer */
 
+  .left-footer {
+    max-width: 300px;
+    margin-right: 100px;
+  }
   .text-footer {
     height: 125px;
-    max-width: 500px;
   }
 
   .right-footer {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
 
   .item1-footer {
-    margin: 10px 10px 0 0;
+    margin-right: 10px;
     height: 180px;
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
   }
   .item2-footer {
     height: 180px;
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
   }
 }
 
@@ -233,23 +243,6 @@
 @media screen and (min-width: 85em) {
   /* conteudo do top do site começo */
 
-  .left-footer {
-    width: 30%;
-  }
-
   .nav {
-    padding: 0 15% 0 15%;
-  }
-
-  section {
-    padding: 20px 15% 0 15%;
-  }
-
-  main {
-    padding: 20px 15% 0 15%;
-  }
-
-  footer {
-    padding: 20px 15% 0 15%;
   }
 }
