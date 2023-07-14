@@ -245,21 +245,27 @@
 
   .nav {
     max-width: 1000px;
+    margin: 0 auto;
   }
 
   .top-content {
     max-width: 1040px;
+    margin: 20px auto;
   }
 
   .main-content {
     max-width: 1000px;
+    margin: 80px auto;
   }
 
   .bottom-content {
     max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 50px;
   }
 
   .alinha-footer {
     max-width: 1000px;
+    margin: 0 auto;
   }
 }
