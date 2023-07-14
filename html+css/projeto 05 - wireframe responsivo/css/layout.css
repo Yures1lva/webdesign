@@ -140,7 +140,7 @@
   /* fim do conteudo inferior  */
 
   /*footer */
-  .footer {
+  .alinha-footer {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -239,10 +239,27 @@
   }
 }
 
-/*1360px+ widescreen  */
-@media screen and (min-width: 85em) {
+/*1000px+ widescreen  */
+@media screen and (min-width: 62.5em) {
   /* conteudo do top do site começo */
 
   .nav {
+    max-width: 1000px;
+  }
+
+  .top-content {
+    max-width: 1040px;
+  }
+
+  .main-content {
+    max-width: 1000px;
+  }
+
+  .bottom-content {
+    max-width: 1000px;
+  }
+
+  .alinha-footer {
+    max-width: 1000px;
   }
 }

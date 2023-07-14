@@ -228,10 +228,12 @@ header {
   height: 70px;
 }
 
+footer {
+  background-color: #d9d9d9;
+}
 .footer {
   margin: 0;
   padding-top: 5px;
-  background-color: #d9d9d9;
   display: block;
 }
 
