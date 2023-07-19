@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Curso de JS</h1>
+
+  <input type="text" id="txtNome" value="digite o nome">
+  <button onclick="escreve()">ok</button>
+  <div id="msg"></div>
+
+
+  <script>
+    var txtNome2 = document.querySelector('#txtNome')
+
+    function escreve() {
+      var nome = txtNome2.value
+      document.querySelector('#msg').innerHTML = "bem vindo, <b>" + nome + "</b>"
+
+    }
+  </script>
+</body>
+
+
+
+</html>

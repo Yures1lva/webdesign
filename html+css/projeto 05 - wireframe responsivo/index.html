@@ -17,9 +17,13 @@
 
   <header>
     <nav class="nav">
-      <!-- <img src="img/Group 10.svg" alt=""> -->
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
       <div class="logo-nav">logo</div>
-      <ul>
+      <ul class="nav-list">
         <li class="item1"><a href="#">item 1</a></li>
         <li class="item2"><a href="#">item 2</a></li>
         <li class="item3"><a href="#">item 3</a></li>
@@ -166,6 +170,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    class MobileNavbar {
+      constructor(mobileMenu, navList, navLinks) {
+        this.mobileMenu = document.querySelector(mobileMenu)
+        this.navList = document.querySelector(navList)
+        this.navlinks = document.querySelectorAll(navlinks)
+        this.activeClass = 'active'
+      }
+
+      addClickEvent() {
+        this.mobileMenu.addEventListener("click", () => console.logn("HEY"))
+      }
+
+      init() {
+        if (this.mobileMenu) {
+          this.addClickEvent()
+        }
+        return this
+      }
+      mobileNavbar = new MobileNavbar(
+        ".mobile-menu",
+        ".nav-list",
+        ".nav-list li"
+      )
+    }
+
+
+  </script>
 
 </body>
 
