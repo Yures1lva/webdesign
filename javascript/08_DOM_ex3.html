@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 03</title>
+</head>
+
+<body>
+
+  <h1>Curso de JS</h1>
+
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim odio quos consequatur .</p>
+
+  <p>accusantium laboriosam, placeat exercitationem facere natus</p>
+
+  <p>voluptatibus commodi nesciunt quia tempora? Eaque molestias ipsum dicta alias perferendis deserunt,
+  </p>
+
+  <script>
+
+    (function () {
+      'use strict'
+      var paragrafos = document.querySelectorAll('p')
+
+      var x = 0
+      while (paragrafos[x]) {
+        paragrafos[x].textContent = 'Essa page foi hackeada'
+        x++
+      }
+    })()
+
+  </script>
+
+</body>
+
+</html>
