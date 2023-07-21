@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>curso de js</h1>
+
+
+    <button id="btn3">botao 3</button>
+  </div>
+
+  <div class="container">
+    <h1>propagação de eventos</h1>
+
+    <div id="d1" style="background: red; padding: 25px;">
+      texto dentro da div
+      <span style="background: yellow;">texto dentro da span</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Delegação de eventos</h1>
+
+    <ul>
+      <li>lista 1</li>
+      <li>Lista 2</li>
+      <li>Lista 3</li>
+    </ul>
+  </div>
+
+
+</body>
+
+<script>
+
+  var clicks = 0
+  btn3.addEventListener("click", function (e) {
+    alert('alert apos um evento de clique no botão')
+    e.stopPropagation()
+    clicks++
+    console.log("clicou no botao " + clicks + ' vezez')
+
+  })
+
+  btn3.addEventListener("click", function () {
+    alert('alert apos um evento de clique no botão 2')
+  })
+
+  var $d1 = document.querySelector('#d1')
+  var $d1Span = document.querySelector('#d1 span')
+
+  $d1.addEventListener('click', function () {
+    console.log('clique no d1')
+  })
+
+  $d1Span.addEventListener('click', function () {
+    console.log('clique no d1Span')
+  })
+
+
+  var $ul = document.querySelector('ul')
+  var $lis = document.querySelectorAll('li')
+
+  // var x = 0
+  // while ($lis[x]) {
+  //   $lis[x].addEventListener('click', function (e) {
+  //     e.stopPropagation()
+  //     console.log('clique na li')
+  //   })
+  //   x++
+  // }
+
+
+  $ul.addEventListener('click', function (e) {
+    e.stopPropagation()
+    //target é o clique exato de onde o evento foi disparado
+    console.log(e.target)
+  })
+
+</script>
+
+
+</html>

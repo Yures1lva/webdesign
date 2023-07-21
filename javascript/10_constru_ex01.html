@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+</body>
+
+<script>
+
+  var pessoa1 = {
+    nome: 'daniel',
+    sobrenome: 'tapias'
+  }
+
+  var pessoa2 = {
+    nome: 'Amoz',
+    sobrenome: 'Silva'
+  }
+
+  var pessoa3 = {
+    nome: 'Julian',
+    sobrenome: 'Pereira'
+  }
+
+  var pessoa = [pessoa1, pessoa2, pessoa3]
+
+  for (var j = 0; j < pessoa.length; j++) {
+    console.log(pessoa[j].nome + ' ' + pessoa[j].sobrenome)
+  }
+
+  // for (var i = 1; i <= 3; i++) {
+  //   console.log(window["pessoa" + i].nome + ' ' + window["pessoa" + i].sobrenome)
+  // }
+
+  var i = 0
+
+  while (i < pessoa.length) {
+    console.log(pessoa[i].nome + ' ' + pessoa[i].sobrenome)
+    i++
+
+  }
+
+</script>
+
+
+</html>
