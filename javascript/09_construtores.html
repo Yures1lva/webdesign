@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <title>Construtores em JS</title>
+</head>
+
+<body>
+
+  <div id="output"></div>
+
+</body>
+
+<script>
+
+  (function (window) {
+    //não deixa elementos internos saírem pro escopo global
+    'use strict'
+
+    window.Caneta = function (preco, cor) {
+      var color = cor || 'black'
+      this.preco = preco || 1
+
+      this.mudarCor = function (cor) {
+        if (cor !== 'red' && cor !== 'blue' && cor !== 'black') {
+          return
+        }
+        color = cor
+      }
+
+      this.pegarCor = function () {
+        return color
+      }
+
+    }
+
+  })(window)
+
+  var caneta1 = new Caneta()
+
+</script>
+
+
+</html>
