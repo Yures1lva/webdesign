@@ -26,7 +26,7 @@
       <input type="password" name="pass" id="txtPass">
       <br>
       <br>
-      <button type="button" id="btn">Logar</button>
+      <button type="submit" id="btn">Logar</button>
 
     </form>
   </div>
@@ -38,18 +38,19 @@
 
   (function () {
     'use strict'
-
+    var $form = document.querySelector('form')
     var $txtUser = document.getElementById('txtUser')
     var $txtPass = document.getElementById('txtPass')
     var $btn = document.getElementById('btn')
 
-    $btn.addEventListener('click', function () {
+    $form.addEventListener('submit', function (e) {
       // esse tipo de verificação "!" é caso não tenha string 
       //nos value das variáveis, ou seja se o valor for igual a false
       if (!$txtUser.value || !$txtPass.value) {
         alert('Prencha todos os campos')
+        e.preventDefault() //previne o comportamento padrão, nesse caso o de mandar o formulário
       } else {
-        alert('clicou no botão')
+        alert('formulário enviado com sucesso')
 
       }
     })
