@@ -17,7 +17,7 @@
   <h1>Curso de JS Completo</h1>
 
   <textarea name="" id="msg" cols="50" rows="10" maxlength="150"></textarea>
-  <h4 style="display: none;" id="limite">Restam <span id="resta"></span> Caracteres</h4>
+  <h6 style="display: none;" id="limite">Restam <span id="resta"></span> Caracteres</h6>
 
 </body>
 
@@ -35,7 +35,7 @@
 
     // $txtMsg.addEventListener('keypress', keypress)
     // $txtMsg.addEventListener('keyup', keyup)
-    $resta.textContent = max
+    showCaracter(max)
     $txtMsg.addEventListener('input', checkLenght)
     // function keypress(e) {
     //   console.log('keypress', this.value)
@@ -50,9 +50,13 @@
     function checkLenght(e) {
 
       var digitados = this.value.length
-      $resta.textContent = max - digitados
+      showCaracter(parseInt(max) - parseInt(digitados))
 
 
+    }
+
+    function showCaracter(n) {
+      $resta.textContent = n
     }
 
 
