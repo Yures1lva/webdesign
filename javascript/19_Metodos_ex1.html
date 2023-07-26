@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Curso de JS Completo</h1>
+
+</body>
+
+<script>
+
+  (function () {
+    'use strict'
+    var nome = 'Daniel Tapias Morales'
+    console.log('nome inicial', nome)
+
+    var nomeFormatado = formatarNome(nome)
+
+    console.log(nomeFormatado)
+    function formatarNome(nome) {
+
+      var lastSpace = nome.lastIndexOf(' ')
+
+      if (lastSpace <= 0) {
+        return nome
+      }
+      var lastName = nome.slice(lastSpace)
+      console.log('ultimoNome', lastName)
+
+      var firstName = nome.slice(0, lastSpace)
+      console.log('ultimo espaço', lastSpace)
+
+      return lastName + ', ' + firstName
+
+    }
+
+  })()
+
+</script>
+
+
+</html>

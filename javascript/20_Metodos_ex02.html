@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Curso de JS Completo</h1>
+
+
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut id dolores, accusamus, beatae quae in, maxime
+    repudiandae molestiae ullam veniam provident rem? Id numquam iure porro magni ullam soluta veniam.lore Lorem ipsum
+    dolor sit amet, consectetur adipisicing elit. Minima, pariatur ullam nemo illum distinctio nihil, incidunt sit
+    soluta corporis sequi modi. Nam inventore deserunt iusto magnam, ex culpa ut quos? </p>
+
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut id dolores, accusamus, beatae quae in, maxime
+    repudiandae molestiae ullam veniam provident rem? Id numquam iure porro magni ullam soluta veniam.lore Lorem ipsum
+    dolor sit amet, consectetur adipisicing elit. Minima, pariatur ullam nemo illum distinctio nihil, incidunt sit
+    soluta corporis sequi modi. Nam inventore deserunt iusto magnam, ex culpa ut quos? </p>
+
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut id dolores, accusamus, beatae quae in, maxime
+    repudiandae molestiae
+  </p>
+
+</body>
+
+<script>
+
+  (function () {
+    'use strict'
+
+    window.addEventListener('load', init)
+
+    function init() {
+
+      var $p = document.querySelectorAll('p')
+
+      var x = 0
+
+      while ($p[x]) {
+        $p[x].innerHTML = formatText($p[x].innerHTML)
+        x++
+      }
+
+      function formatText(texto) {
+        var max = 200
+        if (texto.length <= max) return texto
+
+        var subtexto = texto.slice(0, max)
+        return subtexto + '...'
+      }
+
+    }
+
+
+
+
+  })()
+
+</script>
+
+
+</html>
