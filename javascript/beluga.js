@@ -10,3 +10,9 @@ function calcularMedia() {
   console.log("o total é " + total);
   return (total / qtd).toFixed(2);
 }
+
+function sortear(n) {
+  random = Math.floor(n * Math.random(n));
+
+  return random;
+}
