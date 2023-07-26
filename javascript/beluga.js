@@ -8,5 +8,5 @@ function calcularMedia() {
     x++;
   }
   console.log("o total é " + total);
-  return total / qtd;
+  return (total / qtd).toFixed(2);
 }
