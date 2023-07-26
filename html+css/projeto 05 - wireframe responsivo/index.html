@@ -17,11 +17,11 @@
 
   <header>
     <nav class="nav">
-      <div class="mobile-menu">
+      <!-- <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
-      </div>
+      </div> -->
       <div class="logo-nav">logo</div>
       <ul class="nav-list">
         <li class="item1"><a href="#">item 1</a></li>
@@ -149,7 +149,7 @@
     <div class="bottom-content-bottom">
       <form action="" method="post">
         <input type="text" id="name" name="name">
-        <input type="email" id="email" name="email">
+        <input type="email" id="mail" name="mail">
         <input type="password" id="password" name="password">
         <input type="password" id="password-confirme" name="password-confirme">
         <input type="submit" value="subscribe" class="button-default">
@@ -171,34 +171,7 @@
     </div>
   </footer>
 
-  <script>
-    class MobileNavbar {
-      constructor(mobileMenu, navList, navLinks) {
-        this.mobileMenu = document.querySelector(mobileMenu)
-        this.navList = document.querySelector(navList)
-        this.navlinks = document.querySelectorAll(navlinks)
-        this.activeClass = 'active'
-      }
-
-      addClickEvent() {
-        this.mobileMenu.addEventListener("click", () => console.logn("HEY"))
-      }
-
-      init() {
-        if (this.mobileMenu) {
-          this.addClickEvent()
-        }
-        return this
-      }
-      mobileNavbar = new MobileNavbar(
-        ".mobile-menu",
-        ".nav-list",
-        ".nav-list li"
-      )
-    }
-
-
-  </script>
+  <script src="js/menu.js"></script>
 
 </body>
 

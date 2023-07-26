@@ -63,8 +63,17 @@
     $ul.addEventListener('click', function (e) {
       if (e.target.nodeName === 'LI') {
         toggleDone(e.target)
+
+        removeTask(e.target)
       }
     })
+
+
+    function removeTask(li) {
+      if (confirm('deseja realmente excluir a tarefa: \n' + li.textContent + ' ?')) {
+        li.parentNode.removeChild(li)
+      }
+    }
 
     //função pra adicionar ou tirar uma calsse de um elemento html
     function toggleDone(li) {

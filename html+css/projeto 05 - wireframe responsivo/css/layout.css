@@ -9,7 +9,7 @@
   }
   .nav {
     display: flex;
-    margin: 0 20px;
+    flex-direction: row;
   }
 
   .logo-nav {
