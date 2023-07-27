@@ -1,10 +1,13 @@
-// (function () {
-//   "use strict";
+(function () {
+  "use strict";
 
-//   var $html = document.querySelector("html");
-//   var $btn = document.querySelector(".mobile-menu");
+  var $hamb = document.getElementById("hamb");
 
-//   $btn.addEventListener("click", function () {
-//     $html.classList.toggle("menu-opened");
-//   });
-// })();
+  $hamb.addEventListener("click", toggleMenu);
+
+  function toggleMenu() {
+    var $nav = document.getElementById("ul-nav");
+    // com a nav criada é possível acessar suas classes por mieo do classList e com isso adicionar ou tirar uma nova classe com o toggle
+    $nav.classList.toggle("active");
+  }
+})();

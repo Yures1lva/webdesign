@@ -17,9 +17,21 @@
     margin: 10px 0;
   }
 
-  .mobile-menu div {
+  #ul-nav.active {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+    top: 0;
+    right: 0;
+    height: auto;
+  }
+
+  .mobile-menu {
     width: 0;
     height: 0;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     opacity: 0;
     display: block;
