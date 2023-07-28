@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Curso de JS Completo</h1>
+
+  <input type="text" id="cronometro">
+  <button class="iniciar">Iniciar</button>
+  <button class="pausar">Pausar</button>
+  <button class="parar">Parar</button>
+
+</body>
+
+<script>
+
+  (function () {
+
+    var $cronometro = document.querySelector('#cronometro')
+    var $iniciar = document.querySelector('.iniciar')
+    var $pausar = document.querySelector('.pausar')
+    var $parar = document.querySelector('.parar')
+    var clique = 0
+    var cliquePausar = 0
+    var intervalo = null
+    var rodando = false
+    var decorrido = 0
+
+    $iniciar.addEventListener('click', iniciar)
+    $pausar.addEventListener('click', pausar)
+    $parar.addEventListener('click', parar)
+
+
+    function iniciar() {
+      if (rodando) return
+      clique = Date.now();
+      iniciarCronometro()
+      rodando = true
+    }
+
+    function pausar() {
+      if (!$cronometro.value) return
+      if (rodando) {
+        clearInterval(intervalo)
+        cliquePausar = Date.now()
+        decorrido += (cliquePausar - clique)
+      } else {
+        iniciarCronometro(decorrido)
+        clique = Date.now();
+      }
+
+      rodando = !rodando
+
+    }
+
+    function parar() {
+      cliquePausar = 0
+      clique = 0
+      decorrido = 0
+      clearInterval(intervalo)
+      rodando = 0
+      $cronometro.value = '0'
+
+    }
+
+
+
+    function iniciarCronometro(tempoD) {
+      var _ms = tempoD || 0
+      intervalo = setInterval(function () {
+        var timeNow = Date.now()
+        var diferenca = timeNow - clique
+        $cronometro.value = formataMs(diferenca + _ms)
+      }, 100)
+    }
+
+    const MIN = 60 * 1000
+    function formataMs(t) {
+      if (t < 1000) {
+        return t
+      } else if (t < MIN) {
+        var s = t / 1000
+        s = parseInt(s)
+        var c = t - (s * 1000)
+        return s + ':' + c
+      } else {
+        var m = t / (MIN)
+        m = parseInt(m)
+        return m + ':' + formataMs(ms - m + MIN)
+
+        // var s = t / 1000 - (m * 60)
+        // s = parseInt(s)
+        // var c = t - (s * 1000) - (m * MIN)
+        // return m + ":" + s + ':' + c
+      }
+    }
+
+
+
+
+  })()
+
+</script>
+
+
+</html>
