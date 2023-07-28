@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="atuthor" content="Yuro">
+  <meta name="descript" content="arquivo base">
+  <meta name="keywords" content="html, js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<style>
+  body {
+    background: rgba(0, 0, 0, 0.548);
+  }
+
+  .banner {
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto;
+    display: none;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+  }
+
+  .appbar {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+
+<body>
+
+  <h1>Temporizador</h1>
+
+  <div class="banner" id="banner">
+    <div class="appbar">
+      <h1>Banner Irritante</h1>
+      <button id="btn">X </button>
+    </div>
+
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eos accusantium nostrum unde ad eveniet,
+        similique maxime officia non tenetur iusto illo quos quis dolorem. Cumque aspernatur harum corporis sit!
+
+        Lorem ipsum dearum modi assumenda aut? Voluptas, odit. Cupiditate assumenda sint nihil?</p>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde non error explicabo eveniet ut dolorem doloribus
+        ea illum. Dolorem consectetur ratione aut. Vitae beatae doloremque obcaecati quo, impedit mollitia nulla. Lorem,
+        iolor sit amet, consectetur adipisicing elit. Doloribus eius cum earum, libero maxime quia voluptatum soluta
+        voluptates consequuntur numquam alias reiciendis deleniti? Molestias, doloremque repellat reiciendis est
+        distinctio deleniti?</p>
+    </div>
+  </div>
+
+</body>
+
+<script>
+
+  (function () {
+    var $banner = document.querySelector('.banner')
+    var $btn = document.querySelector('#btn')
+    var time = null
+
+    $btn.addEventListener('click', escondeBanner)
+
+    function mostrarBanner() {
+      $banner.style.display = 'block'
+      time = setTimeout(escondeBanner, 10000)
+
+    }
+
+    function escondeBanner() {
+      $btn.removeEventListener('click', escondeBanner)
+      $banner.parentNode.removeChild($banner)
+      clearTimeout(time)
+    }
+
+    setTimeout(mostrarBanner, 5000)
+
+
+  })()
+
+</script>
+
+
+</html>
