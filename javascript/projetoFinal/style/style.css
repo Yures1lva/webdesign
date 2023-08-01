@@ -265,3 +265,22 @@ img {
 .no-js .quote-slideshow figure + figure {
   margin-top: 5em;
 }
+
+.footer {
+  background-color: #242a3c;
+  padding: 50px 0 250px;
+  color: #4d575a;
+  font-size: 14px;
+}
+
+.footer-links li {
+  list-style: none;
+  color: #4d575a;
+
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-links a {
+  display: block;
+}
