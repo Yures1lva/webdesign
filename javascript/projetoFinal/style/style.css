@@ -241,3 +241,27 @@ img {
   display: inline-block;
   padding: 15px;
 }
+
+.quote-container {
+  background-color: #63c6ae;
+  padding: 50px 0;
+  border-bottom: 12px solid #48b9a1;
+}
+
+.quote-slideshow h2 {
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 100;
+  padding: 0 2em;
+}
+
+.quote-slideshow figcaption {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+.no-js .quote-slideshow figure + figure {
+  margin-top: 5em;
+}
