@@ -69,7 +69,11 @@ img {
 .header__nav a:hover {
   color: #63c6ae;
 }
-.header_btnMenu {
+.header__btnMenu {
+  float: right;
+  margin: 1.5em;
+  background: transparent;
+  border: none;
 }
 
 .hero {
