@@ -1,4 +1,4 @@
-function menu(config) {
+function Menu(config) {
   this.nav =
     typeof config.container === "string"
       ? document.querySelector(config.container)
@@ -11,7 +11,7 @@ function menu(config) {
 
   this.maxWidth = config.widthEnable || false;
 
-  this.btn.revomeAttrinbute("style");
+  this.btn.removeAttribute("style");
   closeMenu();
 
   var _opened = false;
@@ -28,20 +28,14 @@ function menu(config) {
   }
 
   function openMenu() {
-    var _top = this.nav.getBoundingClientReact().top + "px";
+    var _top = this.nav.getBoundingClientReact()._top + "px";
     var _style = {
-      maxHeigth: "calc(100vh - " + top + ")",
+      maxHeigth: "calc(100vh - " + _top + ")",
       overflow: "hidden",
     };
 
     applyStyleToNav(_style);
     _opened = true;
-  }
-
-  function applyStyleToNav(_style) {
-    Object.keys(_style).forEach((stl) => {
-      _this.nav._style[stl] = _style[stl];
-    });
   }
 
   function closeMenu() {
@@ -52,5 +46,11 @@ function menu(config) {
 
     applyStyleToNav(_style);
     _opened = false;
+  }
+
+  function applyStyleToNav(_style) {
+    Object.keys(_style).forEach((stl) => {
+      _this.nav._style[stl] = _style[stl];
+    });
   }
 }

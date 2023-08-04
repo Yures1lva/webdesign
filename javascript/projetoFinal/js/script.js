@@ -6,9 +6,9 @@
   var $btnMenu = document.querySelector(".header__btnMenu");
   $btnMenu.removeAttribute("style");
 
-  var $menu = new menubar({
-    container: "header__nav",
-    toggleBtbn: "header__btnMenu",
-    widthEnable: 1024,
-  });
+  // var menu = new Menu({
+  //   container: "header__nav",
+  //   toggleBtn: "header__btnMenu",
+  //   widthEnable: 1024,
+  // });
 })();
