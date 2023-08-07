@@ -14,14 +14,14 @@ img {
   max-width: 980px;
 }
 
-.js .header {
-  position: fixed;
-  width: 100%;
-}
-
 .header {
+  position: fixed;
+
   background: #fff;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-text {
@@ -36,10 +36,6 @@ img {
   color: #fff;
   float: left;
   text-align: right;
-}
-
-.header__nav {
-  clear: left;
 }
 
 .header__nav ul {
@@ -69,11 +65,27 @@ img {
 .header__nav a:hover {
   color: #63c6ae;
 }
-.header__btnMenu {
-  float: right;
-  margin: 1.5em;
-  background: transparent;
+
+#menu {
+  /* display: none; */
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  right: 0;
+  display: block;
+  z-index: 1000;
+  transition: 0.6s;
+}
+#nav.active #menu {
+  display: none;
+}
+
+#btn-mobile {
+  display: flex;
+  padding: 0.5rem 1rem;
   border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .hero {
@@ -298,8 +310,26 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  .header {
+  #header {
     position: fixed;
+    display: flex;
+  }
+
+  #btn-mobile {
+    display: none;
+    overflow: hidden;
+  }
+
+  #menu {
+    position: relative;
+    width: 100%;
+    top: auto;
+    right: auto;
+    display: flex;
+    z-index: 0;
+  }
+  #nav.active #menu {
+    display: flex;
   }
 
   .logo-text {
@@ -311,26 +341,21 @@ img {
     display: none;
   }
 
-  .header__nav {
-    float: right;
-    width: 75%;
-    clear: none;
-    max-width: 800px;
-  }
-
-  .header__nav ul {
-    display: flex;
-    justify-content: space-around;
-  }
-
   .header__nav ul li {
     border-bottom: NONE;
     flex-grow: 1;
   }
 
+  .header__nav ul {
+    padding-right: 50px;
+  }
+
   .header__nav a {
     background: white;
     display: block;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    height: 100%;
   }
 
   .cards-people {

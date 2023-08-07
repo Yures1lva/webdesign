@@ -1,14 +1,10 @@
 (function () {
-  var $body = document.querySelector("body");
-  $body.classList.remove("no-js");
-  $body.classList.add("js");
+  var $btnMobile = document.getElementById("btn-mobile");
 
-  var $btnMenu = document.querySelector(".header__btnMenu");
-  $btnMenu.removeAttribute("style");
+  $btnMobile.addEventListener("click", toggleMenu);
 
-  // var menu = new Menu({
-  //   container: "header__nav",
-  //   toggleBtn: "header__btnMenu",
-  //   widthEnable: 1024,
-  // });
+  function toggleMenu() {
+    var $nav = document.getElementById("nav");
+    $nav.classList.toggle("active");
+  }
 })();
