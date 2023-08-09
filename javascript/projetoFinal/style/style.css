@@ -335,6 +335,7 @@ img {
 
 .wrapper i:first-child {
   left: -20px;
+  /* display: none; */
 }
 .wrapper i:last-child {
   right: -20px;
@@ -345,6 +346,16 @@ img {
   font-size: 0px;
   cursor: pointer;
   overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel .dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel .dragging {
+  pointer-events: none;
 }
 
 .carousel img {

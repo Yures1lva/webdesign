@@ -17,6 +17,7 @@
 
   const dragStop = () => {
     isDragStart = false;
+    $carousel.classList.remove("dragging");
   };
   const dragStart = (e) => {
     isDragStart = true;
@@ -26,6 +27,7 @@
   const dragging = (e) => {
     if (!isDragStart) return;
     e.preventDefault();
+    $carousel.classList.add("dragging");
     let positionDiff = e.pageX - prevPageX;
     $carousel.scrollLeft = prevScrollLeft - positionDiff;
   };
@@ -41,10 +43,16 @@
 
   let firstImgWidth = $firstImage.clientWidth + 10;
 
+  const showHideIcons = () => {
+    $arrowsIcons[0].style.display =
+      $carousel.scrollLeft === 0 ? "none" : "block";
+  };
+
   $arrowsIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
       $carousel.scrollLeft +=
         icon.id == "left" ? -firstImgWidth : firstImgWidth;
+      // showHideIcons();
     });
   });
 })();
