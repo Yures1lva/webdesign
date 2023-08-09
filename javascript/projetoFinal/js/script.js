@@ -39,7 +39,7 @@
   var $arrowsIcons = document.querySelectorAll(".wrapper i");
   var $firstImage = $carousel.querySelectorAll("img")[0];
 
-  let firstImgWidth = $firstImage.clientWidth + 14;
+  let firstImgWidth = $firstImage.clientWidth + 10;
 
   $arrowsIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
