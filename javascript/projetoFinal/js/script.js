@@ -1,10 +1,5 @@
 (function () {
   var $btnMobile = document.getElementById("btn-mobile");
-  var $slide = document.querySelector(".slide .slideshow");
-  var $itens = document.querySelector("figure");
-  var $btnPrev = document.querySelector(".prev");
-  var $btnNext = document.querySelector(".next");
-  var _currentSlider = 0;
 
   $btnMobile.addEventListener("click", toggleMenu);
 
@@ -13,34 +8,43 @@
     $nav.classList.toggle("active");
   }
 
-  init();
+  //Scroll carousel
 
-  function init() {
-    var _show = $slide.querySelectorAll(".show");
+  let isDragStart = false,
+    prevPageX,
+    prevScrollLeft;
+  var $carousel = document.querySelector(".carousel");
 
-    Array.prototype.forEach.call(_show, function (sh) {
-      sh.classList.remove("show");
+  const dragStop = () => {
+    isDragStart = false;
+  };
+  const dragStart = (e) => {
+    isDragStart = true;
+    prevPageX = e.pageX;
+    prevScrollLeft = $carousel.scrollLeft;
+  };
+  const dragging = (e) => {
+    if (!isDragStart) return;
+    e.preventDefault();
+    let positionDiff = e.pageX - prevPageX;
+    $carousel.scrollLeft = prevScrollLeft - positionDiff;
+  };
+
+  $carousel.addEventListener("mousedown", dragStart);
+  $carousel.addEventListener("mousemove", dragging);
+  $carousel.addEventListener("mouseup", dragStop);
+
+  //arrows Carousel
+
+  var $arrowsIcons = document.querySelectorAll(".wrapper i");
+  var $firstImage = $carousel.querySelectorAll("img")[0];
+
+  let firstImgWidth = $firstImage.clientWidth + 14;
+
+  $arrowsIcons.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      $carousel.scrollLeft +=
+        icon.id == "left" ? -firstImgWidth : firstImgWidth;
     });
-    $itens.classList.add("show");
-    $btnNext.removeAttribute("style");
-    $btnPrev.removeAttribute("style");
-
-    addlistener();
-  }
-
-  function addlistener() {
-    $btnNext.addEventListener("click", function () {
-      _currentSlider++;
-      showSlide();
-    });
-    $btnPrev.addEventListener("click", function () {
-      _currentSlider--;
-      showSlide();
-    });
-  }
-
-  function showSlide() {
-    var qtd = $itens.lenght;
-    var slider = _currentSlider % qtd;
-  }
+  });
 })();
