@@ -35,6 +35,7 @@
   $carousel.addEventListener("mousedown", dragStart);
   $carousel.addEventListener("mousemove", dragging);
   $carousel.addEventListener("mouseup", dragStop);
+  $carousel.addEventListener("mousleave", dragStop);
 
   //arrows Carousel
 
@@ -43,16 +44,16 @@
 
   let firstImgWidth = $firstImage.clientWidth + 10;
 
-  const showHideIcons = () => {
-    $arrowsIcons[0].style.display =
-      $carousel.scrollLeft === 0 ? "none" : "block";
-  };
+  // const showHideIcons = () => {
+  //   $arrowsIcons[0].style.display =
+  //     $carousel.scrollLeft == 0 ? "none" : "block";
+  // };
 
   $arrowsIcons.forEach((icon) => {
     icon.addEventListener("click", () => {
       $carousel.scrollLeft +=
         icon.id == "left" ? -firstImgWidth : firstImgWidth;
-      // showHideIcons();
+      setTimeout(() => showHideIcons(), 60);
     });
   });
 })();

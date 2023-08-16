@@ -16,7 +16,7 @@ img {
 
 .header {
   position: fixed;
-
+  z-index: 10;
   background: #fff;
   width: 100%;
   display: flex;
@@ -322,6 +322,7 @@ img {
 
 .wrapper i {
   top: 50%;
+  color: white;
   transform: translateY(-50%);
   position: absolute;
   width: 48px;
@@ -368,6 +369,16 @@ img {
 /* .carousel img:first-child {
   margin-left: 0;
 } */
+
+@media screen and (max-wdth: 460px) {
+  .carousel img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    margin-left: 10px;
+    border: 2px solid red;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   #header {
